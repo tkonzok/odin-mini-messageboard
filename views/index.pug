@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  .messages
+    each message in messages
+      p #{message.text} 
+      p <em>(by #{message.user} on #{message.added})</em>
+  button
+    a(href="/new") Add Message
